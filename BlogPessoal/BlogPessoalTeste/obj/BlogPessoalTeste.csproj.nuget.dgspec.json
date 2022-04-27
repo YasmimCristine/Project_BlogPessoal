@@ -25,7 +25,11 @@
         "frameworks": {
           "net5.0": {
             "targetAlias": "net5.0",
-            "projectReferences": {}
+            "projectReferences": {
+              "C:\\Users\\daniz\\Desktop\\Curso Generetion\\BPVSC\\BlogPessoal\\BlogPessoal\\BlogPessoal.csproj": {
+                "projectPath": "C:\\Users\\daniz\\Desktop\\Curso Generetion\\BPVSC\\BlogPessoal\\BlogPessoal\\BlogPessoal.csproj"
+              }
+            }
           }
         },
         "warningProperties": {
@@ -45,6 +49,14 @@
             "MSTest.TestFramework": {
               "target": "Package",
               "version": "[2.2.3, )"
+            },
+            "Microsoft.EntityFrameworkCore": {
+              "target": "Package",
+              "version": "[5.0.13, )"
+            },
+            "Microsoft.EntityFrameworkCore.InMemory": {
+              "target": "Package",
+              "version": "[5.0.13, )"
             },
             "Microsoft.NET.Test.Sdk": {
               "target": "Package",
@@ -66,6 +78,77 @@
           "assetTargetFallback": true,
           "warn": true,
           "frameworkReferences": {
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.404\\RuntimeIdentifierGraph.json"
+        }
+      }
+    },
+    "C:\\Users\\daniz\\Desktop\\Curso Generetion\\BPVSC\\BlogPessoal\\BlogPessoal\\BlogPessoal.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "C:\\Users\\daniz\\Desktop\\Curso Generetion\\BPVSC\\BlogPessoal\\BlogPessoal\\BlogPessoal.csproj",
+        "projectName": "BlogPessoal",
+        "projectPath": "C:\\Users\\daniz\\Desktop\\Curso Generetion\\BPVSC\\BlogPessoal\\BlogPessoal\\BlogPessoal.csproj",
+        "packagesPath": "C:\\Users\\daniz\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\daniz\\Desktop\\Curso Generetion\\BPVSC\\BlogPessoal\\BlogPessoal\\obj\\",
+        "projectStyle": "PackageReference",
+        "configFilePaths": [
+          "C:\\Users\\daniz\\AppData\\Roaming\\NuGet\\NuGet.Config"
+        ],
+        "originalTargetFrameworks": [
+          "net5.0"
+        ],
+        "sources": {
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "net5.0": {
+            "targetAlias": "net5.0",
+            "projectReferences": {}
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "net5.0": {
+          "targetAlias": "net5.0",
+          "dependencies": {
+            "Microsoft.EntityFrameworkCore": {
+              "target": "Package",
+              "version": "[5.0.13, )"
+            },
+            "Microsoft.EntityFrameworkCore.SqlServer": {
+              "target": "Package",
+              "version": "[5.0.13, )"
+            },
+            "Microsoft.EntityFrameworkCore.Tools": {
+              "include": "Runtime, Build, Native, ContentFiles, Analyzers, BuildTransitive",
+              "suppressParent": "All",
+              "target": "Package",
+              "version": "[5.0.13, )"
+            }
+          },
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.AspNetCore.App": {
+              "privateAssets": "none"
+            },
             "Microsoft.NETCore.App": {
               "privateAssets": "all"
             }
