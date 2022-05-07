@@ -1,3 +1,4 @@
+using System.Collections.Generic;
 using BlogPessoal.src.dtos;
 using BlogPessoal.src.modelos;
 
@@ -17,7 +18,7 @@ namespace BlogPessoal.src.repositorios
         void DeletarUsuario(int id);
         UsuarioModelo PegarUsuarioPeloId(int id);
         UsuarioModelo PegarUsuarioPeloEmail(string email);
-        UsuarioModelo PegarUsuarioPeloNome(string nome);
+       List <UsuarioModelo> PegarUsuarioPeloNome(string nome);
 
 
     }

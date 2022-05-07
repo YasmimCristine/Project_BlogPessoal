@@ -22,9 +22,9 @@ namespace BlogPessoal.src.dtos
         public string EmailCriador { get; set; }
 
         [Required]
-        public int DescricaoTema { get; set; }
+        public string DescricaoTema { get; set; }
 
-        public NovaPostagemDTO(string titulo, string descricao, string foto, string emailCriador, int descricaotema)
+        public NovaPostagemDTO(string titulo, string descricao, string foto, string emailCriador, string descricaotema)
         {
             Titulo = titulo;
             Descricao = descricao;
@@ -42,6 +42,9 @@ namespace BlogPessoal.src.dtos
     /// </summary>
     public class AtualizarPostagemDTO
     {
+        [Required]
+        public int Id { get; set;}
+        
         [Required, StringLength(30)]
         public string Titulo { get; set; }
 
@@ -53,8 +56,9 @@ namespace BlogPessoal.src.dtos
         [Required]
         public string DescricaoTema { get; set; }
 
-        public AtualizarPostagemDTO(string titulo, string descricao, string foto, string descricaoTema)
+        public AtualizarPostagemDTO(int id, string titulo, string descricao, string foto, string descricaoTema)
         {
+            Id = id;
             Titulo = titulo;
             Descricao = descricao;
             Foto = foto;
