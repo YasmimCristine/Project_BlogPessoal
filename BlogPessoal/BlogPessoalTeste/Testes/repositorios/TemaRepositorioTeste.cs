@@ -57,8 +57,7 @@ namespace BlogPessoalTeste.Testes.repositorios
         }
         
        [TestMethod]
-       [DataRow]
-        public void PegaTemaPelaDescricaoRetornadoisTemas(string Descricao)
+        public void PegaTemaPelaDescricaoRetornadoisTemas()
         {
             // Definindo o contexto
             var opt = new DbContextOptionsBuilder<BlogPessoalContexto>()

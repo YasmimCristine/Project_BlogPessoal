@@ -1,5 +1,8 @@
+using System;
 using BlogPessoal.src.dtos;
 using BlogPessoal.src.repositorios;
+using BlogPessoal.src.servicos;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 
 
@@ -12,13 +15,15 @@ namespace BlogPessoal.src.controladores
     {
         #region Atributos
         private readonly IUsuario _repositorio;
+        private readonly IAutenticacao _servicos;
 
         #endregion
 
         #region Construtores
-        public UsuarioControlador(IUsuario repositorio)
+        public UsuarioControlador(IUsuario repositorio, IAutenticacao servicos)
         {
             _repositorio = repositorio;
+            _servicos = servicos;
         }
 
         #endregion
@@ -46,17 +51,26 @@ namespace BlogPessoal.src.controladores
             return Ok(usuario);
         }
         [HttpPost]
+        [AllowAnonymous]
         public IActionResult NovoUsuario([FromBody] NovoUsuarioDTO usuario)
         {
             if (!ModelState.IsValid) return BadRequest();
-            _repositorio.NovoUsuario(usuario);
-            return Created($"api/Usuarios/{usuario.Email}", usuario);
+            try
+            {
+                _servicos.CriarUsuarioSemDuplicar(usuario);
+                return Created($"api/Usuarios/email/{usuario.Email}", usuario);
+            }
+            catch (Exception ex)
+            {
+                return Unauthorized(ex.Message);
+            }
         }
         [HttpPut]
-        public IActionResult AtualizarUsuario([FromBody] AtualizarUsuarioDTO
-usuario)
+        [Authorize(Roles = "NORMAL,ADMINISTRADOR")]
+        public IActionResult AtualizarUsuario([FromBody] AtualizarUsuarioDTO usuario)
         {
             if (!ModelState.IsValid) return BadRequest();
+            usuario.Senha = _servicos.CodificarSenha(usuario.Senha);
             _repositorio.AtualizarUsuario(usuario);
             return Ok(usuario);
         }

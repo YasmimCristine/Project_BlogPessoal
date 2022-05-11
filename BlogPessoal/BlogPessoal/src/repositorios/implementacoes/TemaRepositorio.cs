@@ -51,7 +51,7 @@ namespace BlogPessoal.src.repositorios.implementacoes
             return _contexto.Temas.ToList();
         }
 
-        public List<TemaModelo> PegarTemaPelaDescricao(string descricao)
+        public List<TemaModelo> PegarTemasPelaDescricao(string descricao)
         {
             return _contexto.Temas
                             .Where(u => u.Descricao.Contains(descricao))
@@ -63,10 +63,6 @@ namespace BlogPessoal.src.repositorios.implementacoes
             return _contexto.Temas.FirstOrDefault(u => u.Id == id);
         }
 
-        public List<TemaModelo> PegarTemasPelaDescricao(string descricao)
-        {
-            throw new System.NotImplementedException();
-        }
         #endregion Metodos
     }
 }

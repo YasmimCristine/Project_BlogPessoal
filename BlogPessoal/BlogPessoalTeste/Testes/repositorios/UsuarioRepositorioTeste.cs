@@ -3,6 +3,7 @@ using BlogPessoal.src.data;
 using BlogPessoal.src.dtos;
 using BlogPessoal.src.repositorios;
 using BlogPessoal.src.repositorios.implementacoes;
+using BlogPessoal.src.utilidades;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
 
@@ -31,25 +32,25 @@ namespace BlogPessoalTeste.Testes.repositorios
             "Gustavo Boaz",
             "gustavo@email.com",
             "134652",
-            "URLFOTO"));
+            "URLFOTO", TipoUsuario.NORMAL));
             _repositorio.NovoUsuario(
             new NovoUsuarioDTO(
             "Mallu Boaz",
             "mallu@email.com",
             "134652",
-            "URLFOTO"));
+            "URLFOTO",TipoUsuario.NORMAL));
             _repositorio.NovoUsuario(
             new NovoUsuarioDTO(
             "Catarina Boaz",
             "catarina@email.com",
             "134652",
-            "URLFOTO"));
+            "URLFOTO", TipoUsuario.NORMAL));
             _repositorio.NovoUsuario(
             new NovoUsuarioDTO(
             "Pamela Boaz",
             "pamela@email.com",
             "134652",
-            "URLFOTO"));
+            "URLFOTO", TipoUsuario.NORMAL));
             //WHEN - Quando pesquiso lista total
             //THEN - Então recebo 4 usuarios
             Assert.AreEqual(4, _contexto.Usuarios.Count());
@@ -72,7 +73,7 @@ namespace BlogPessoalTeste.Testes.repositorios
             "Zenildo Boaz",
             "zenildo@email.com",
             "134652",
-            "URLFOTO"));
+            "URLFOTO", TipoUsuario.NORMAL));
             //WHEN - Quando pesquiso pelo email deste usuario
             var user = _repositorio.PegarUsuarioPeloEmail("zenildo@email.com");
             //THEN - Então obtenho um usuario
@@ -96,8 +97,8 @@ namespace BlogPessoalTeste.Testes.repositorios
             "Neusa Boaz",
             "neusa@email.com",
             "134652",
-            "URLFOTO"));
-            
+            "URLFOTO", TipoUsuario.NORMAL));
+
             //WHEN - Quando pesquiso pelo id 6
             var user = _repositorio.PegarUsuarioPeloId(1);
             //THEN - Então, deve me retornar um elemento não nulo
@@ -123,7 +124,7 @@ namespace BlogPessoalTeste.Testes.repositorios
             "Estefânia Boaz",
             "estefania@email.com",
             "134652",
-            "URLFOTO"));
+            "URLFOTO", TipoUsuario.NORMAL));
 
             //WHEN - Quando atualizamos o usuario
             var antigo = _repositorio.PegarUsuarioPeloEmail("estefania@email.com");
@@ -135,9 +136,9 @@ namespace BlogPessoalTeste.Testes.repositorios
             "URLFOTONOVA"));
 
             //THEN - Então, quando validamos pesquisa deve retornar nome Estefânia Moura
-        Assert.AreEqual(
-        "Estefânia Moura",
-        _contexto.Usuarios.FirstOrDefault(u => u.Id == antigo.Id).Nome);
+            Assert.AreEqual(
+            "Estefânia Moura",
+            _contexto.Usuarios.FirstOrDefault(u => u.Id == antigo.Id).Nome);
             //THEN - Então, quando validamos pesquisa deve retornar senha 123456
             Assert.AreEqual(
             "123456",

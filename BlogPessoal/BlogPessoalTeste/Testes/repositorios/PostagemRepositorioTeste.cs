@@ -3,6 +3,7 @@ using BlogPessoal.src.data;
 using BlogPessoal.src.dtos;
 using BlogPessoal.src.repositorios;
 using BlogPessoal.src.repositorios.implementacoes;
+using BlogPessoal.src.utilidades;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
 
@@ -31,11 +32,11 @@ namespace BlogPessoalTeste.Testes.repositorios
 
             // GIVEN - Dado que registro 2 usuarios
             _repositorioU.NovoUsuario(
-                new NovoUsuarioDTO("Gustavo Boaz","gustavo@email.com","134652", "URLDAFOTO")
+                new NovoUsuarioDTO("Gustavo Boaz","gustavo@email.com","134652", "URLDAFOTO", TipoUsuario.NORMAL)
             );
             
             _repositorioU.NovoUsuario(
-                new NovoUsuarioDTO("Catarina Boaz","catarina@email.com","134652","URLDAFOTO")
+                new NovoUsuarioDTO("Catarina Boaz","catarina@email.com","134652","URLDAFOTO", TipoUsuario.NORMAL)
             );
             
             // AND - E que registro 2 temas
@@ -91,7 +92,7 @@ namespace BlogPessoalTeste.Testes.repositorios
 
             // GIVEN - Dado que registro 1 usuarios
             _repositorioU.NovoUsuario(
-                new NovoUsuarioDTO("Gustavo Boaz","gustavo@email.com","134652", "URLDAFOTO")
+                new NovoUsuarioDTO("Gustavo Boaz","gustavo@email.com","134652", "URLDAFOTO", TipoUsuario.NORMAL)
             );
             
             // AND - E que registro 1 tema
@@ -142,11 +143,11 @@ namespace BlogPessoalTeste.Testes.repositorios
 
             // GIVEN - Dado que registro 2 usuarios
             _repositorioU.NovoUsuario(
-                new NovoUsuarioDTO("Gustavo Boaz","gustavo@email.com","134652", "URLDAFOTO")
+                new NovoUsuarioDTO("Gustavo Boaz","gustavo@email.com","134652", "URLDAFOTO", TipoUsuario.NORMAL)
             );
             
             _repositorioU.NovoUsuario(
-                new NovoUsuarioDTO("Catarina Boaz","catarina@email.com","134652","URLDAFOTO")
+                new NovoUsuarioDTO("Catarina Boaz","catarina@email.com","134652","URLDAFOTO", TipoUsuario.NORMAL)
             );
             
             // AND - E que registro 2 temas
