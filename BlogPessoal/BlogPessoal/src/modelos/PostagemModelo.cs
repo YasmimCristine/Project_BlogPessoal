@@ -2,6 +2,12 @@ using System.ComponentModel.DataAnnotations;
 using System.ComponentModel.DataAnnotations.Schema;
 namespace BlogPessoal.src.modelos
 {
+    /// <summary>
+    /// <para>Resumo: Classe responsavel por representar tb_postagens no banco.</para>
+    /// <para>Criado por: Yasmim Cristine</para>
+    /// <para>Versão: 1.0</para>
+    /// <para>Data: 15/05/2022</para>
+    /// </summary>
     [Table("tb_Postagens")]
     public class PostagemModelo
     {

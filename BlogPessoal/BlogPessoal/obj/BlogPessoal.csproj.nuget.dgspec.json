@@ -1,20 +1,20 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\daniz\\Desktop\\Curso Generetion\\BPVSC\\BlogPessoal\\BlogPessoal\\BlogPessoal.csproj": {}
+    "C:\\Users\\yasmim\\Desktop\\Curso Generetion\\BPVSC\\BlogPessoal\\BlogPessoal\\BlogPessoal.csproj": {}
   },
   "projects": {
-    "C:\\Users\\daniz\\Desktop\\Curso Generetion\\BPVSC\\BlogPessoal\\BlogPessoal\\BlogPessoal.csproj": {
+    "C:\\Users\\yasmim\\Desktop\\Curso Generetion\\BPVSC\\BlogPessoal\\BlogPessoal\\BlogPessoal.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\daniz\\Desktop\\Curso Generetion\\BPVSC\\BlogPessoal\\BlogPessoal\\BlogPessoal.csproj",
+        "projectUniqueName": "C:\\Users\\yasmim\\Desktop\\Curso Generetion\\BPVSC\\BlogPessoal\\BlogPessoal\\BlogPessoal.csproj",
         "projectName": "BlogPessoal",
-        "projectPath": "C:\\Users\\daniz\\Desktop\\Curso Generetion\\BPVSC\\BlogPessoal\\BlogPessoal\\BlogPessoal.csproj",
-        "packagesPath": "C:\\Users\\daniz\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\daniz\\Desktop\\Curso Generetion\\BPVSC\\BlogPessoal\\BlogPessoal\\obj\\",
+        "projectPath": "C:\\Users\\yasmim\\Desktop\\Curso Generetion\\BPVSC\\BlogPessoal\\BlogPessoal\\BlogPessoal.csproj",
+        "packagesPath": "C:\\Users\\yasmim\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\yasmim\\Desktop\\Curso Generetion\\BPVSC\\BlogPessoal\\BlogPessoal\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "C:\\Users\\daniz\\AppData\\Roaming\\NuGet\\NuGet.Config"
+          "C:\\Users\\yasmim\\AppData\\Roaming\\NuGet\\NuGet.Config"
         ],
         "originalTargetFrameworks": [
           "net5.0"
@@ -50,6 +50,10 @@
               "target": "Package",
               "version": "[5.0.13, )"
             },
+            "Microsoft.EntityFrameworkCore.Analyzers": {
+              "target": "Package",
+              "version": "[5.0.13, )"
+            },
             "Microsoft.EntityFrameworkCore.SqlServer": {
               "target": "Package",
               "version": "[5.0.13, )"
@@ -59,6 +63,10 @@
               "suppressParent": "All",
               "target": "Package",
               "version": "[5.0.13, )"
+            },
+            "Swashbuckle.AspNetCore": {
+              "target": "Package",
+              "version": "[5.6.3, )"
             }
           },
           "imports": [

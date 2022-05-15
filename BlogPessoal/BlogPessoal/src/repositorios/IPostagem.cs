@@ -1,4 +1,5 @@
 using System.Collections.Generic;
+using System.Threading.Tasks;
 using BlogPessoal.src.dtos;
 using BlogPessoal.src.modelos;
 
@@ -12,14 +13,12 @@ namespace BlogPessoal.src.repositorios
     /// </summary>
     public interface IPostagem
     {
-        void NovaPostagem(NovaPostagemDTO postagem);
-        void AtualizarPostagem(AtualizarPostagemDTO postagem);
-        void DeletarPostagem(int id);
-        PostagemModelo PegarPostagemPeloId(int id);
-        List<PostagemModelo> PegarTodasPostagens();
-        List<PostagemModelo> PegarPostagensPeloTitulo(string titulo);
-        List<PostagemModelo> PegarPostagensPelaDescricao(string descricao);
-        List<PostagemModelo> PegarPostagensPorPesquisa(string titulo, string descricaoTema, string nomeCriador);
+        Task NovaPostagemAsync(NovaPostagemDTO postagem);
+        Task AtualizarPostagemAsync(AtualizarPostagemDTO postagem);
+        Task DeletarPostagemAsync(int id);
+        Task<PostagemModelo> PegarPostagemPeloIdAsync(int id);
+        Task<List<PostagemModelo>> PegarTodasPostagensAsync();
+        Task<List<PostagemModelo>> PegarPostagensPorPesquisaAsync(string titulo, string descricaoTema, string nomeCriador);
 
     }
 }

@@ -4,9 +4,9 @@ namespace BlogPessoal.src.dtos
 {
     /// <summary>
     /// <para>Resumo: Classe espelho para criar uma nova postagem</para>
-    /// <para>Criado por: Gustavo Boaz</para>
+    /// <para>Criado por: Yasmim Cristine</para>
     /// <para>Versão: 1.0</para>
-    /// <para>Data: 29/04/2022</para>
+    /// <para>Data: 15/05/2022</para>
     /// </summary>
     public class NovaPostagemDTO
     {
@@ -36,9 +36,9 @@ namespace BlogPessoal.src.dtos
     }
     /// <summary>
     /// <para>Resumo: Classe espelho para alterar uma postagem</para>
-    /// <para>Criado por: Gustavo Boaz</para>
+    /// <para>Criado por: Yasmim Cristine</para>
     /// <para>Versão: 1.0</para>
-    /// <para>Data: 29/04/2022</para>
+    /// <para>Data: 15/05/2022</para>
     /// </summary>
     public class AtualizarPostagemDTO
     {
